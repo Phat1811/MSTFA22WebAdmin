@@ -1,0 +1,63 @@
+<form [formGroup]="tutorCreateForm">
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Họ</mat-label>
+        <input matInput formControlName="firstName" placeholder="Nhập họ">
+        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'">
+        </mat-icon>
+    </mat-form-field>
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Tên</mat-label>
+        <input matInput formControlName="lastName" placeholder="Nhập tên">
+        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'">
+        </mat-icon>
+    </mat-form-field>
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Bio</mat-label>
+        <input matInput formControlName="bio" placeholder="Nhập mô tả">
+        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'">
+        </mat-icon>
+    </mat-form-field>
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price" placeholder="Nhập giá">
+        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'">
+        </mat-icon>
+    </mat-form-field>
+    
+    <mat-form-field class="mb-0 w-full">
+        <mat-label>Gender</mat-label>
+        <mat-icon class="icon-size-5 mr-2" [svgIcon]="'heroicons_solid:globe-alt'" matPrefix>
+        </mat-icon>
+        <mat-select (valueChange)="changeGenderValue($event)">
+            <mat-option *ngFor="let gender of genders" [value]="gender.id">{{
+                gender.name }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Grades</mat-label>
+        <mat-icon class="icon-size-5 mr-2" [svgIcon]="'heroicons_solid:globe-alt'" matPrefix>
+        </mat-icon>
+        <mat-select (valueChange)="changeGradeValue($event)" multiple>
+            <mat-option *ngFor="let grade of grades" [value]="grade.id">{{
+                grade.name }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Subjects</mat-label>
+        <mat-icon class="icon-size-5 mr-2" [svgIcon]="'heroicons_solid:globe-alt'" matPrefix>
+        </mat-icon>
+        <mat-select (valueChange)="changeSubjectValue($event)" multiple>
+            <mat-option *ngFor="let subject of subjects" [value]="subject.id">{{
+                subject.name }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button class="w-full" mat-flat-button [color]="'primary'" (click)="createTutor()">
+        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_outline:plus'"></mat-icon>
+        <span class="truncate ml-2 mr-1 hidden md:block">Tạo Mới</span>
+    </button>
+</form>
