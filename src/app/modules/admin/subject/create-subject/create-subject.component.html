@@ -1,0 +1,19 @@
+<form [formGroup]="subjectCreateForm">
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Tên</mat-label>
+        <input matInput formControlName="name" placeholder="Nhập Tên">
+        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'">
+        </mat-icon>
+    </mat-form-field>
+    <mat-form-field class="flex-auto w-full gt-xs:pr-3">
+        <mat-label>Mô tả</mat-label>
+        <input matInput formControlName="description" placeholder="Nhập mô tả">
+        <mat-icon class="icon-size-5" matSuffix [svgIcon]="'heroicons_solid:user-circle'">
+        </mat-icon>
+    </mat-form-field>
+    
+    <button class="w-full" mat-flat-button [color]="'primary'" (click)="createSubject()">
+        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_outline:plus'"></mat-icon>
+        <span class="truncate ml-2 mr-1 hidden md:block">Tạo Mới</span>
+    </button>
+</form>

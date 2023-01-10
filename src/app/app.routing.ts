@@ -7,6 +7,8 @@ import { LayoutComponent } from 'app/layout/layout.component';
 import { InitialDataResolver } from 'app/app.resolvers';
 import { StudentsResolver } from './modules/admin/students/student.resolvers';
 import { TutorsResolver } from './modules/admin/tutors/tutor.resolvers';
+import { GradeResolver } from './modules/admin/grades/grade.resolver';
+import { SubjectResolver } from './modules/admin/subject/subject.resolver';
 
 // @formatter:off
 /* eslint-disable max-len */
@@ -106,6 +108,20 @@ export const appRoutes: Route[] = [
                     CoursesResolver
                 },
                 loadChildren: () => import('app/modules/admin/courses/course.module').then(m => m.CourseModule)
+            },
+            {
+                path: 'grades',
+                resolve: {
+                    GradeResolver
+                },
+                loadChildren: () => import('app/modules/admin/grades/grade.module').then(m => m.GradeModule)
+            },
+            {
+                path: 'subjects',
+                resolve: {
+                    SubjectResolver
+                },
+                loadChildren: () => import('app/modules/admin/subject/subject.module').then(m => m.SubjectModule)
             },
         ]
     },

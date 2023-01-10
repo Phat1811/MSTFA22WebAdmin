@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    baseUrl: 'https://mst-fall22-capstone.azurewebsites.net'
+    baseUrl: 'https://mst-fall22.azurewebsites.net'
 };
 
 /*

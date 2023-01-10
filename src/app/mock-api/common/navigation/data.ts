@@ -43,6 +43,20 @@ export const defaultNavigation: FuseNavigationItem[] = [
                 icon: 'heroicons_outline:chart-pie',
                 link: '/admin/courses'
             },
+            {
+                id: 'admin.grades',
+                title: 'Quản Lý Lớp',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/grades'
+            },
+            {
+                id: 'admin.subjects',
+                title: 'Quản Lý Môn Học',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/subjects'
+            },
         ]
     },
 ];
@@ -87,6 +101,20 @@ export const compactNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 icon: 'heroicons_outline:chart-pie',
                 link: '/admin/courses'
+            },
+            {
+                id: 'admin.grades',
+                title: 'Quản Lý Lớp',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/grades'
+            },
+            {
+                id: 'admin.subjects',
+                title: 'Quản Lý Môn Học',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/subjects'
             },
         ]
     },
@@ -133,6 +161,20 @@ export const futuristicNavigation: FuseNavigationItem[] = [
                 icon: 'heroicons_outline:chart-pie',
                 link: '/admin/courses'
             },
+            {
+                id: 'admin.grades',
+                title: 'Quản Lý Lớp',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/grades'
+            },
+            {
+                id: 'admin.subjects',
+                title: 'Quản Lý Môn Học',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/subjects'
+            },
         ]
     },
 ];
@@ -177,6 +219,20 @@ export const horizontalNavigation: FuseNavigationItem[] = [
                 type: 'basic',
                 icon: 'heroicons_outline:chart-pie',
                 link: '/admin/courses'
+            },
+            {
+                id: 'admin.grades',
+                title: 'Quản Lý Lớp',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/grades'
+            },
+            {
+                id: 'admin.subjects',
+                title: 'Quản Lý Môn Học',
+                type: 'basic',
+                icon: 'heroicons_outline:chart-pie',
+                link: '/admin/subjects'
             },
         ]
     },

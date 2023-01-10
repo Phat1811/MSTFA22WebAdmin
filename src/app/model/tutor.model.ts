@@ -1,5 +1,5 @@
 import { Grade } from './grade.model';
-import { Subject } from './subject.model';
+import { Subjects } from './subject.model';
 import { Gender } from './gender.model';
 export interface Tutor {
     id: string;
@@ -7,7 +7,7 @@ export interface Tutor {
     lastName: string;
     avatarUrl: string;
     gender: Gender;
-    subjects: Subject[];
+    subjects: Subjects[];
     grades: Grade[];
     bio: string;
     price: number;

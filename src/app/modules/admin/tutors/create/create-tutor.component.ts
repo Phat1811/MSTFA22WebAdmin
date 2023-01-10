@@ -6,7 +6,7 @@ import {
 } from '@angular/forms';
 import { TutorService } from './../tutor.service';
 import { Grade } from './../../../../model/grade.model';
-import { Subject } from './../../../../model/subject.model';
+import { Subjects } from './../../../../model/subject.model';
 import {
     ChangeDetectorRef,
     Component,
@@ -22,7 +22,7 @@ import { MatDialogRef } from '@angular/material/dialog';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreateTutorComponent implements OnInit, AfterViewInit {
-    subjects: Subject[] = [];
+    subjects: Subjects[] = [];
     grades: Grade[] = [];
     genders: Gender[] = [];
     tutorCreateForm: UntypedFormGroup = null;
